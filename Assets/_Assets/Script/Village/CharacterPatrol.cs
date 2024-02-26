@@ -5,15 +5,12 @@ using UnityEngine.AI;
 
 public class CharacterPatrol : Character
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private NavMeshAgent agent;
 
-    // Update is called once per frame
-    void Update()
+    public void Setup(float speed, Vector3 destination)
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = speed;
+        agent.SetDestination(destination);
     }
 }

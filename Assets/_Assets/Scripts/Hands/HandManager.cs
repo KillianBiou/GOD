@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
 public class HandManager : MonoBehaviour
 {
     [SerializeField] private float slapSpeedThreshold = 1.0f;
@@ -25,19 +26,21 @@ public class HandManager : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         IInteractable interactable;
-        if (collision.collider.TryGetComponent<IInteractable>(out interactable))
+        if (!collision.collider.TryGetComponent<IInteractable>(out interactable))
         {
-            switch (state)
-            {
-                case HandState.Normal:
-                    break;
-                case HandState.Slap:
-                    interactable.Slap();
-                    break;
-                case HandState.Grab:
-                    interactable.Grab();
-                    break;
-            }
+            return;
+        }
+
+        switch (state)
+        {
+            case HandState.Normal:
+                break;
+            case HandState.Slap:
+                interactable.Slap();
+                break;
+            case HandState.Grab:
+                interactable.Grab();
+                break;
         }
     }
 

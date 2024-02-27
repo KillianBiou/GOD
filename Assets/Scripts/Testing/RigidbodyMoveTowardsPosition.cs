@@ -21,4 +21,10 @@ public class RigidbodyMoveTowardsPosition : MonoBehaviour
             transform.position = targetPosition + new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
         }
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, targetPosition);
+        Gizmos.DrawSphere(targetPosition, 0.2f);
+    }
 }

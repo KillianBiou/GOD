@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Tornado : MonoBehaviour, IInteractable
+public class Tornado : Enemy, IInteractable
 {
     public void Grab()
     {

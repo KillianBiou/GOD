@@ -30,9 +30,14 @@ public class PatrolManager : MonoBehaviour
         Vector3 startingPos = patrolPos.Item1;
 
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(patrolPos.Item1, out hit, 1.0f, NavMesh.AllAreas))
+        if (NavMesh.SamplePosition(patrolPos.Item1, out hit, Mathf.Infinity, NavMesh.AllAreas))
+        {
             startingPos = hit.position;
+            Debug.Log("Point found");
+        }
         GameObject a = Instantiate(character, startingPos, Quaternion.identity, characterHolder.transform);
         a.GetComponent<CharacterPatrol>().Setup(Random.Range(speedRange[0], speedRange[1]), patrolPos.Item2);
+
+        StartCoroutine(SpawnPatrol());
     }
 }

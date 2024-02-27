@@ -6,7 +6,7 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DefaultLayer 2
+  m_Name: FieldsLayer
   m_DiffuseTexture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
   m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
@@ -17,6 +17,6 @@ TerrainLayer:
   m_Smoothness: 0
   m_NormalScale: 1
   m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
-  m_DiffuseRemapMax: {x: 0.091939025, y: 0.2264151, z: 0.09077964, w: 1}
+  m_DiffuseRemapMax: {x: 0.764151, y: 0.7424067, z: 0.046858337, w: 1}
   m_MaskMapRemapMin: {x: 0, y: 0, z: 0, w: 0}
   m_MaskMapRemapMax: {x: 1, y: 1, z: 1, w: 1}

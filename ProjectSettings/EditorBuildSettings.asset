@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Testing/SystemTestScene.unity
+  - enabled: 0
+    path: Assets/_Assets/Scene/Testing/SystemTestScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/_Assets/Scene/PlayerScene.unity
+    guid: 7e1ef8b3309dd764e9f44419cbb30a84
+  - enabled: 0
+    path: Assets/Scenes/TerrainMap.unity
+    guid: 2b2f59fba3c56ae4bafe74b2c10bad78
+  - enabled: 1
+    path: Assets/Scenes/EZFEZ.unity
+    guid: b749cf76957fe17479f5d27db2f92619
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f2133ca1704550242b3013cd32230697,
       type: 2}

@@ -6,11 +6,12 @@ public class Heretic : Enemy, IInteractable
 {
     public void Grab()
     {
-
+        Debug.LogWarning("Heretic grab");
     }
 
     public void Slap()
     {
+        Debug.LogWarning("Heretic slap");
         Destroy(gameObject);
     }
 

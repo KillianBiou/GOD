@@ -212,6 +212,9 @@ namespace Oculus.Interaction.Input
             rigidbody.gameObject.SetActive(false);
             rigidbody.gameObject.layer = _useLayer;
 
+            HandCollisionBehaviour behaviour = rigidbody.AddComponent<HandCollisionBehaviour>();
+            behaviour.SetHandManager(_handManager);
+
             return rigidbody;
         }
 
@@ -235,9 +238,6 @@ namespace Oculus.Interaction.Input
             capsuleTransform.SetParent(holder, false);
             capsuleTransform.SetPositionAndRotation(from, boneRotation);
             collider.gameObject.layer = _useLayer;
-
-            HandCollisionBehaviour behaviour = collider.AddComponent<HandCollisionBehaviour>();
-            behaviour.SetHandManager(_handManager);
 
             return collider;
         }
@@ -344,6 +344,11 @@ namespace Oculus.Interaction.Input
 
         public Vector3 GetHandVelocity()
         {
+            if (_rigidbodies.Length == 0)
+            {
+                return Vector3.zero;
+            }
+
             return _rigidbodies[0].velocity;
         }
     }

@@ -5,12 +5,19 @@ using UnityEngine;
 public class HandCollisionBehaviour : MonoBehaviour
 {
     private HandManager handManager;
+
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("hand collision");
         IInteractable interactable;
         if (!collision.collider.TryGetComponent<IInteractable>(out interactable))
         {
+            return;
+        }
+
+        if (!handManager)
+        {
+            Debug.Log("Pas de hand manager");
             return;
         }
 
@@ -24,7 +31,7 @@ public class HandCollisionBehaviour : MonoBehaviour
                 interactable.Slap();
                 break;
             case HandManager.HandState.Grab:
-                interactable.Grab();
+                interactable.Grab(transform);
                 break;
         }
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9668,7 +9668,7 @@ GameObject:
   - component: {fileID: 998050489}
   - component: {fileID: 998050492}
   - component: {fileID: 998050491}
-  - component: {fileID: 998050490}
+  - component: {fileID: 998050493}
   m_Layer: 0
   m_Name: OVRRightHandVisual
   m_TagString: Untagged
@@ -9692,24 +9692,6 @@ Transform:
   - {fileID: 1571387631}
   m_Father: {fileID: 1508901561}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &998050490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998050488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1e477b940c8a084ab4f2dda703b49ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _handVisual: {fileID: 0}
-  _hand: {fileID: 1508901562}
-  _jointsRadiusFeature: {fileID: 168554892}
-  _asTriggers: 0
-  _useLayer: 0
-  _mask: 3674108
 --- !u!114 &998050491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9768,6 +9750,24 @@ MonoBehaviour:
   blockId: 316c5b1d-a5e4-49f2-a663-15fd22dbcba9
   instanceId: 18f5bbd4-4516-41ce-a4a4-59fadf9b2cc7
   version: 1
+--- !u!114 &998050493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998050488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ccb53528743ac48a9ca2ce9b9cf964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handVisual: {fileID: 0}
+  _hand: {fileID: 1508901562}
+  _jointsRadiusFeature: {fileID: 168554892}
+  _asTriggers: 0
+  _useLayer: 0
+  _mask: 4165628
 --- !u!1 &998480038
 GameObject:
   m_ObjectHideFlags: 0
@@ -11796,7 +11796,7 @@ GameObject:
   - component: {fileID: 1223186021}
   - component: {fileID: 1223186024}
   - component: {fileID: 1223186023}
-  - component: {fileID: 1223186022}
+  - component: {fileID: 1223186025}
   m_Layer: 0
   m_Name: OVRLeftHandVisual
   m_TagString: Untagged
@@ -11820,24 +11820,6 @@ Transform:
   - {fileID: 278890793}
   m_Father: {fileID: 306141825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1223186022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223186020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1e477b940c8a084ab4f2dda703b49ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _handVisual: {fileID: 0}
-  _hand: {fileID: 306141826}
-  _jointsRadiusFeature: {fileID: 418276496}
-  _asTriggers: 0
-  _useLayer: 0
-  _mask: 3674108
 --- !u!114 &1223186023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11896,6 +11878,24 @@ MonoBehaviour:
   blockId: 316c5b1d-a5e4-49f2-a663-15fd22dbcba9
   instanceId: 04d06f24-08af-41b3-9efc-f54ef0dc563c
   version: 1
+--- !u!114 &1223186025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223186020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ccb53528743ac48a9ca2ce9b9cf964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handVisual: {fileID: 0}
+  _hand: {fileID: 306141826}
+  _jointsRadiusFeature: {fileID: 418276496}
+  _asTriggers: 0
+  _useLayer: 0
+  _mask: 4165628
 --- !u!1 &1225701316
 GameObject:
   m_ObjectHideFlags: 0

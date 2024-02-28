@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(HandPhysicsCapsules))]
 public class HandManager : MonoBehaviour
 {
-    [SerializeField] private float slapSpeedThreshold = 1.0f;
+    [SerializeField] private float slapSpeedThreshold = 2.0f;
     public enum HandState
     {
         Normal,
@@ -15,6 +15,9 @@ public class HandManager : MonoBehaviour
     // Start is called before the first frame update
 
     private HandPhysicsCapsules physics;
+
+    private bool isPreparingAttack = false;
+
     void Start()
     {
         physics = GetComponent<HandPhysicsCapsules>();
@@ -33,7 +36,7 @@ public class HandManager : MonoBehaviour
             return;
         }
         Vector3 velocity = physics.GetHandVelocity();
-        if (velocity.sqrMagnitude > slapSpeedThreshold) // && (handPose == openHand || handPose == closedHand || handPose == pointing)
+        if (isPreparingAttack && velocity.sqrMagnitude > slapSpeedThreshold) // && (handPose == openHand || handPose == closedHand || handPose == pointing)
         {
             state = HandState.Slap;
         }
@@ -64,5 +67,10 @@ public class HandManager : MonoBehaviour
     public void SetHandState(HandState state)
     {
         this.state = state;
+    }
+
+    public void PrepareAttack(bool value)
+    {
+        isPreparingAttack = value;
     }
 }

@@ -6,8 +6,6 @@ public class Heretic : Enemy, IInteractable
 {
     public void Grab(Transform target)
     {
-        transform.parent = target;
-
         Debug.LogWarning("Heretic grab");
     }
 

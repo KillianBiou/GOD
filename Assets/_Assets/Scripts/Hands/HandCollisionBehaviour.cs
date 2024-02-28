@@ -6,6 +6,12 @@ public class HandCollisionBehaviour : MonoBehaviour
 {
     private HandManager handManager;
 
+    private Transform handTransform;
+
+    private void Start()
+    {
+        handTransform = transform.GetChild(0);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("hand collision");
@@ -36,6 +42,16 @@ public class HandCollisionBehaviour : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        //Vector3 expulsionDirection = (collision.transform.position - transform.position).normalized;
+        //collision.rigidbody.AddForce(expulsionDirection, ForceMode.Impulse);
+        if (collision.rigidbody.velocity.sqrMagnitude < 1.2f)
+        {
+            return;
+        }
+        collision.rigidbody.velocity += 0.5f * handTransform.up + 0.5f * handTransform.forward;
+    }
     public void SetHandManager(HandManager handManager)
     {
         this.handManager = handManager;

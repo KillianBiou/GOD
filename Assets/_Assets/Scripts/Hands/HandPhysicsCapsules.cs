@@ -344,7 +344,7 @@ namespace Oculus.Interaction.Input
 
         public Vector3 GetHandVelocity()
         {
-            if (_rigidbodies.Length == 0)
+            if (_rigidbodies == null || _rigidbodies.Length == 0)
             {
                 return Vector3.zero;
             }

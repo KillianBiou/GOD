@@ -5209,7 +5209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606bf2f0c914a7aba4390f29ba2eb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _updateMode: 8
+  _updateMode: 2
   _updateAfter: {fileID: 6891104822685776900}
   _iModifyDataFromSourceMono: {fileID: 6891104822685776900}
   _applyModifier: 0

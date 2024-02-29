@@ -30,4 +30,10 @@ public class Enemy : MonoBehaviour
             //Destroy(gameObject);
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, 0.5f);
+    }
 }

@@ -8,22 +8,34 @@ public class HandCollisionBehaviour : MonoBehaviour
 
     private Transform handTransform;
 
+    private Rigidbody rb;
+
+    private float pushSpeedThreshold = 3.0f;
+
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
         handTransform = transform.GetChild(0);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("hand collision");
-        IInteractable interactable;
-        if (!collision.collider.TryGetComponent<IInteractable>(out interactable))
+        IInteractable interactable = null;
+        /*if (!collision.collider.TryGetComponent<IInteractable>(out interactable))
         {
             return;
         }
 
         if (!handManager)
         {
-            Debug.Log("Pas de hand manager");
+            return;
+        }*/
+
+        Debug.Log(rb.velocity.magnitude);
+
+        Vector3 collisionDirection = (collision.rigidbody.worldCenterOfMass - collision.contacts[0].point).normalized;
+        if (rb.velocity.magnitude > pushSpeedThreshold && Vector3.Dot(collisionDirection, Vector3.up) > - 0.3f)
+        {
+            collision.rigidbody.velocity += 5f * collisionDirection;
             return;
         }
 
@@ -42,7 +54,7 @@ public class HandCollisionBehaviour : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+/*    private void OnCollisionExit(Collision collision)
     {
         //Vector3 expulsionDirection = (collision.transform.position - transform.position).normalized;
         //collision.rigidbody.AddForce(expulsionDirection, ForceMode.Impulse);
@@ -51,7 +63,7 @@ public class HandCollisionBehaviour : MonoBehaviour
             return;
         }
         collision.rigidbody.velocity += 0.5f * handTransform.up + 0.5f * handTransform.forward;
-    }
+    }*/
     public void SetHandManager(HandManager handManager)
     {
         this.handManager = handManager;

@@ -3,13 +3,30 @@ using UnityEngine;
 public class MoveTowardsPosition : MonoBehaviour
 {
     [SerializeField] Vector3 targetPosition = Vector3.zero;
-    private void Update()
-    {
-        transform.position -= 2 * Time.deltaTime * (transform.position - targetPosition).normalized;
+    [SerializeField] float speed = 0.5f;
 
-        if (transform.position.sqrMagnitude < 0.1f)
+    private Vector3 initialPosition = Vector3.zero;
+
+    private Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        initialPosition = transform.position;
+    }
+
+    private void FixedUpdate()
+    {
+        if (!rb.isKinematic)
         {
-            transform.position = new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
+            return;
+        }
+
+        rb.MovePosition(transform.position - speed * (transform.position - targetPosition).normalized);
+
+        if ((transform.position - targetPosition).sqrMagnitude < 0.1f)
+        {
+            transform.position = initialPosition;
         }
     }
 

@@ -7,12 +7,15 @@ public class CharacterPhysics : MonoBehaviour
     private Rigidbody rb;
     private bool thrown = false;
 
-    private float throwSpeedThreshold = 0.001f;
+    private float throwSpeedThreshold = .2f;
 
     Vector3 previousPosition = Vector3.zero;
+
+    private PhysicsGrabbable grabbable;
     // Start is called before the first frame update
     void Start()
     {
+        grabbable = transform.GetChild(0).GetComponent<PhysicsGrabbable>();
         characterCollider = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
         previousPosition = transform.position;
@@ -31,21 +34,24 @@ public class CharacterPhysics : MonoBehaviour
 
         previousPosition = transform.position;
 
-        if (speed < throwSpeedThreshold)
+        if (speed < throwSpeedThreshold || !rb.isKinematic)
         {
             return;
         }
         Debug.Log("THROW");
+        grabbable.RemoveSelection();
+        grabbable.gameObject.SetActive(false);
         thrown = true;
         rb.constraints = RigidbodyConstraints.None;
         characterCollider.enabled = false;
         rb.isKinematic = false;
         Invoke("ResetCollision", 0.2f);
-        rb.velocity = 10 * movementDirection;
+        rb.velocity = 100f * movementDirection;
     }
 
     void ResetCollision()
     {
+        grabbable.gameObject.SetActive(true);
         characterCollider.enabled = true;
         thrown = false;
     }

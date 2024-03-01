@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1139654027278235831}
   - component: {fileID: 9079836538071818062}
-  - component: {fileID: 4823113948941791910}
   - component: {fileID: 8134524649433672447}
+  - component: {fileID: 1377919929609474705}
   m_Layer: 0
   m_Name: BaseEnemy
   m_TagString: Untagged
@@ -49,31 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 88e00098-494f-4b89-aad6-3dc274643579
+  instanceId: 51101896-c794-4afb-958c-e3a8d1321696
   version: 1
---- !u!136 &4823113948941791910
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2218823803806330840}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8134524649433672447
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -101,6 +78,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!65 &1377919929609474705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218823803806330840}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2835590296783935823
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +193,7 @@ GameObject:
   - component: {fileID: 8221994990669699269}
   - component: {fileID: 8685854868651206668}
   - component: {fileID: 7030437397509743575}
-  - component: {fileID: 4920025813428059364}
+  - component: {fileID: 8996503273144884635}
   - component: {fileID: 564248688920213511}
   m_Layer: 0
   m_Name: '[BuildingBlock] TouchHandGrab'
@@ -232,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 4e14e0ba-51f2-4a5c-a822-e304bf36d48c
-  instanceId: fc9c7e9f-ffb2-49b2-bd74-69049aeab8e3
+  instanceId: 177f3148-206c-4505-ba03-b5ced83e4381
   version: 1
 --- !u!114 &7030437397509743575
 MonoBehaviour:
@@ -253,7 +251,7 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 1139654027278235831}
   _maxGrabPoints: -1
---- !u!114 &4920025813428059364
+--- !u!114 &8996503273144884635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,12 +260,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3009321861032747620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
+  m_Script: {fileID: 11500000, guid: fa8f1b4beddba6e4f92a8fe23f9583aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _pointable: {fileID: 7030437397509743575}
   _rigidbody: {fileID: 8134524649433672447}
-  _scaleMassWithSize: 0
+  _scaleMassWithSize: 1
 --- !u!114 &564248688920213511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +283,6 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 7030437397509743575}
-  _boundsCollider: {fileID: 4823113948941791910}
+  _boundsCollider: {fileID: 1377919929609474705}
   _colliders:
-  - {fileID: 4823113948941791910}
+  - {fileID: 1377919929609474705}

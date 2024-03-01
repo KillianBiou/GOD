@@ -12413,7 +12413,7 @@ MonoBehaviour:
   - {fileID: 7107851052292456261, guid: 5aff5754b6f60fe4c89a62fdef762265, type: 3}
   - {fileID: 1701876596919806624, guid: 4511f2e8bf6063b4c8bd105353422ba7, type: 3}
   characterHolder: {fileID: 1310705517}
-  speedRange: {x: 5, y: 8}
+  speedRange: {x: 1, y: 3}
   respawnRange: {x: 0.1, y: 0.3}
   maxPeon: 50
 --- !u!114 &903512714

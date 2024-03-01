@@ -17,6 +17,6 @@ public class Heretic : Enemy, IInteractable
 
     private void OnDestroy()
     {
-        Debug.Log("HERESY ENDS");
+        //Debug.Log("HERESY ENDS");
     }
 }

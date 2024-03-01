@@ -214,7 +214,7 @@ namespace Oculus.Interaction.Input
             rigidbody.gameObject.layer = _useLayer;
 
             HandCollisionBehaviour behaviour = rigidbody.AddComponent<HandCollisionBehaviour>();
-            behaviour.SetHandManager(_handManager);
+            //behaviour.SetHandManager(_handManager);
 
             return rigidbody;
         }

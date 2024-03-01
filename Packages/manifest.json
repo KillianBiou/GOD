@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.meta.xr.sdk.all": "60.0.0",
+    "com.meta.xr.sdk.all": "62.0.0",
     "com.meta.xr.sdk.interaction.ovr": "62.0.0",
     "com.meta.xr.sdk.interaction.ovr.samples": "62.0.0",
     "com.meta.xr.sdk.sharedassets": "62.0.0",

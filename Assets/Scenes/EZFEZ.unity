@@ -3397,6 +3397,7 @@ GameObject:
   - component: {fileID: 222493415}
   - component: {fileID: 222493417}
   - component: {fileID: 222493416}
+  - component: {fileID: 222493418}
   m_Layer: 0
   m_Name: Terrain_(-250.00, 0.00, 0.00)
   m_TagString: Untagged
@@ -3478,6 +3479,37 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &222493418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222493414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.33333334
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1 &225188939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,6 +3619,7 @@ GameObject:
   - component: {fileID: 243136254}
   - component: {fileID: 243136256}
   - component: {fileID: 243136255}
+  - component: {fileID: 243136257}
   m_Layer: 0
   m_Name: Terrain_(250.00, 0.00, 250.00)
   m_TagString: Untagged
@@ -3668,6 +3701,37 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &243136257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243136253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.33333334
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1 &254900358
 GameObject:
   m_ObjectHideFlags: 0
@@ -3710,6 +3774,7 @@ GameObject:
   - component: {fileID: 255979258}
   - component: {fileID: 255979260}
   - component: {fileID: 255979259}
+  - component: {fileID: 255979261}
   m_Layer: 0
   m_Name: Terrain_(-250.00, 0.00, 250.00)
   m_TagString: Untagged
@@ -3791,6 +3856,37 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &255979261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255979257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.33333334
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1 &276870734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,6 +4191,7 @@ GameObject:
   - component: {fileID: 290312727}
   - component: {fileID: 290312729}
   - component: {fileID: 290312728}
+  - component: {fileID: 290312730}
   m_Layer: 0
   m_Name: Terrain_(-250.00, 0.00, -250.00)
   m_TagString: Untagged
@@ -4176,6 +4273,37 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &290312730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290312726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.33333334
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1 &293214221
 GameObject:
   m_ObjectHideFlags: 0
@@ -5744,6 +5872,7 @@ GameObject:
   - component: {fileID: 368143483}
   - component: {fileID: 368143485}
   - component: {fileID: 368143484}
+  - component: {fileID: 368143486}
   m_Layer: 0
   m_Name: Terrain_(250.00, 0.00, 0.00)
   m_TagString: Untagged
@@ -5825,6 +5954,37 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &368143486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368143482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.33333334
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1001 &376608788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6024,6 +6184,7 @@ GameObject:
   - component: {fileID: 383945828}
   - component: {fileID: 383945830}
   - component: {fileID: 383945829}
+  - component: {fileID: 383945831}
   m_Layer: 0
   m_Name: Terrain_(250.00, 0.00, -250.00)
   m_TagString: Untagged
@@ -6105,6 +6266,37 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &383945831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383945827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.33333334
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1 &395185386
 GameObject:
   m_ObjectHideFlags: 0
@@ -11412,7 +11604,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 0.4
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 12aaef0a7ae1dcd42828fe28b9e41872, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!1001 &840490039
 PrefabInstance:
@@ -12162,6 +12354,95 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 671334518}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &903512711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903512715}
+  - component: {fileID: 903512714}
+  - component: {fileID: 903512713}
+  - component: {fileID: 903512712}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &903512712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903512711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229d82b6d36195b4a973428c8dbccfb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinPossibleColors:
+  - {r: 1, g: 0.8152988, b: 0.6556604, a: 0}
+  - {r: 0.6226415, g: 0.3606822, b: 0.1321645, a: 0}
+  textilePossibleColor:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0.10163808, b: 1, a: 0}
+  hairPossibleColor:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0.97885394, g: 1, b: 0, a: 0}
+  - {r: 0.49056602, g: 0.23827593, b: 0, a: 0}
+--- !u!114 &903512713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903512711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1704977c6d7c140b154b6d7616d28e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleCharacters:
+  - {fileID: 7107851052292456261, guid: 5aff5754b6f60fe4c89a62fdef762265, type: 3}
+  - {fileID: 1701876596919806624, guid: 4511f2e8bf6063b4c8bd105353422ba7, type: 3}
+  characterHolder: {fileID: 1310705517}
+  speedRange: {x: 5, y: 8}
+  respawnRange: {x: 0.1, y: 0.3}
+  maxPeon: 50
+--- !u!114 &903512714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903512711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23691e547be833b4b9c8a10bc2a7f4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildings: []
+--- !u!4 &903512715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903512711}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &907370118
 GameObject:
@@ -13601,74 +13882,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037479874}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1038324537
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7107851052292456261, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_Name
-      value: Peon
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 96.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 28.07568
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 105.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.13686183
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9905902
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 195.733
-      objectReference: {fileID: 0}
-    - target: {fileID: 7633593066673628671, guid: 5aff5754b6f60fe4c89a62fdef762265,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5aff5754b6f60fe4c89a62fdef762265, type: 3}
 --- !u!1 &1045837906
 GameObject:
   m_ObjectHideFlags: 0
@@ -17038,6 +17251,7 @@ GameObject:
   - component: {fileID: 1294142072}
   - component: {fileID: 1294142074}
   - component: {fileID: 1294142073}
+  - component: {fileID: 1294142075}
   m_Layer: 0
   m_Name: Terrain_(0.00, 0.00, 250.00)
   m_TagString: Untagged
@@ -17119,6 +17333,37 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &1294142075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294142071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.33333334
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: a826590f8269bfd4891d2fbff9e67157, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1305855289
 GameObject:
   m_ObjectHideFlags: 0
@@ -17308,6 +17553,37 @@ Transform:
   - {fileID: 1564441767}
   - {fileID: 88483135}
   m_Father: {fileID: 176768732}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1310705517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1310705518}
+  m_Layer: 0
+  m_Name: CHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1310705518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310705517}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 128.80399, y: 29.15869, z: 89.49803}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1315231378
 GameObject:
@@ -18317,6 +18593,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8789669297835983445, guid: 3270f6b6487ff7448b15180ce2025a43,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.1499972
+      objectReference: {fileID: 0}
+    - target: {fileID: 8789669297835983445, guid: 3270f6b6487ff7448b15180ce2025a43,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.929993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8789669297835983445, guid: 3270f6b6487ff7448b15180ce2025a43,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.1305278
+      objectReference: {fileID: 0}
+    - target: {fileID: 8789669297835983445, guid: 3270f6b6487ff7448b15180ce2025a43,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9914447
+      objectReference: {fileID: 0}
+    - target: {fileID: 8789669297835983445, guid: 3270f6b6487ff7448b15180ce2025a43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 165
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18701,7 +19002,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1426891689
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21458,7 +21759,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1670743033}
-  - component: {fileID: 1670743034}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -21483,19 +21783,6 @@ Transform:
   - {fileID: 341333098}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1670743034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670743032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23691e547be833b4b9c8a10bc2a7f4c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildings: []
 --- !u!1 &1685049326
 GameObject:
   m_ObjectHideFlags: 0
@@ -23989,6 +24276,7 @@ GameObject:
   - component: {fileID: 1885735162}
   - component: {fileID: 1885735164}
   - component: {fileID: 1885735163}
+  - component: {fileID: 1885735165}
   m_Layer: 0
   m_Name: Terrain_(0.00, 0.00, -250.00)
   m_TagString: Untagged
@@ -24070,6 +24358,37 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &1885735165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885735161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.33333334
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1 &1886791055
 GameObject:
   m_ObjectHideFlags: 0
@@ -27186,13 +27505,14 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 903512715}
+  - {fileID: 1310705518}
   - {fileID: 1670743033}
   - {fileID: 149111030}
   - {fileID: 546395990}
   - {fileID: 1345352249}
   - {fileID: 1426891692}
   - {fileID: 893751309}
-  - {fileID: 1038324537}
   - {fileID: 1564959923}
   - {fileID: 1021671219}
   - {fileID: 1446461109}

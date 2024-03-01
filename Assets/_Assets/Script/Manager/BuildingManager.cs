@@ -16,6 +16,21 @@ public class BuildingManager : MonoBehaviour
 
     public void RegisterBuilding(Building buidling)
     {
-        buildings.Add(buidling);
+        if(buidling.transform.Find("Exit"))
+            buildings.Add(buidling);
+    }
+
+    public (Vector3, Vector3) GetPatrolPos()
+    {
+        int index0 = Random.Range(0, buildings.Count);
+        int index1;
+
+        do
+        {
+            index1 = Random.Range(0, buildings.Count);
+        } while (index1 == index0);
+
+
+        return (buildings[index0].exit.position, buildings[index1].exit.position);
     }
 }

@@ -42,26 +42,6 @@ public class PeonRagdoll : MonoBehaviour
     {
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.N))
-        {
-            ChangeState(RagdollPreset.FREE_ARM);
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            ChangeState(RagdollPreset.FREE_ARM_HEAD);
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            ChangeState(RagdollPreset.FREE_ALL);
-        }
-        if(Input.GetKeyDown(KeyCode.C)) 
-        {
-            ChangeState(RagdollPreset.LOCKED_ALL);
-        }
-    }
-
     public void MatchBones()
     {
         bonesMapping = new List<BonesMatching>();

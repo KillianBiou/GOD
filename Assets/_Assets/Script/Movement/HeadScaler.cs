@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.XR.Management;
 using Node = UnityEngine.XR.XRNode;
 
 public class HeadScaler : MonoBehaviour
@@ -43,5 +44,17 @@ public class HeadScaler : MonoBehaviour
         }
 
         return maxHeadMovementScale;
+    }
+
+    private void OnApplicationQuit()
+
+    {
+
+        if (XRGeneralSettings.Instance.Manager.activeLoader != null)
+        {
+            XRGeneralSettings.Instance.Manager.StopSubsystems();
+            XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+        }
+
     }
 }

@@ -60,7 +60,18 @@ namespace Oculus.Interaction.Input
 
         protected bool _started;
 
-        private HandManager _handManager;
+        [SerializeField] private Vector3 _offset = Vector3.zero;
+        public Vector3 Offset
+        {
+            get
+            {
+                return _offset;
+            }
+            set
+            {
+                _offset = value;
+            }
+        }
 
         #region Editor events
         protected virtual void Reset()
@@ -85,8 +96,6 @@ namespace Oculus.Interaction.Input
             this.AssertField(Hand, nameof(Hand));
             this.AssertField(_jointsRadiusFeature, nameof(_jointsRadiusFeature));
             this.EndStart(ref _started);
-
-            _handManager = GetComponent<HandManager>();
         }
 
         protected virtual void OnEnable()
@@ -122,13 +131,6 @@ namespace Oculus.Interaction.Input
             _holder.localRotation = Quaternion.identity;
             _holder.gameObject.layer = _useLayer;
 
-            /*Rigidbody rigidbody = _holder.AddComponent<Rigidbody>();
-            rigidbody.mass = 100.0f;
-            rigidbody.isKinematic = true;
-            rigidbody.useGravity = false;
-            rigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
-            _holder.AddComponent<HandManager>();*/
-
             int capsulesCount = Constants.NUM_HAND_JOINTS;
             _capsules = new List<BoneCapsule>(capsulesCount);
             Capsules = _capsules.AsReadOnly();
@@ -150,16 +152,17 @@ namespace Oculus.Interaction.Input
                 }
 
                 string boneName = $"{parentJoint}-{currentJoint} CapsuleCollider";
-                float boneRadius = _jointsRadiusFeature.GetJointRadius(parentJoint);
+                float boneRadius = _jointsRadiusFeature.GetJointRadius(parentJoint) * 15;
                 float offset = currentJoint >= HandJointId.HandMaxSkinnable ? -boneRadius
                     : parentJoint == HandJointId.HandStart ? boneRadius
                     : 0f;
 
                 Hand.GetJointPose(currentJoint, out Pose jointPose);
 
-
                 CapsuleCollider collider = CreateCollider(boneName,
                     body.transform, parentPose.position, jointPose.position, boneRadius, offset);
+
+                
 
                 BoneCapsule capsule = new BoneCapsule(parentJoint, currentJoint, body, collider);
                 _capsules.Add(capsule);
@@ -287,10 +290,11 @@ namespace Oculus.Interaction.Input
                 }
 
                 GameObject jointGO = jointbody.gameObject;
+
                 if (_capsulesAreActive
                     && Hand.GetJointPose(jointId, out Pose bonePose))
                 {
-                    jointbody.Move(bonePose.position, bonePose.rotation);
+                    jointbody.Move(bonePose.position + _offset, bonePose.rotation);
 
                     if (!jointGO.activeSelf)
                     {
@@ -351,6 +355,24 @@ namespace Oculus.Interaction.Input
             }
 
             return _rigidbodies[0].velocity;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            for (HandJointId jointId = HandJointId.HandStart; jointId < HandJointId.HandMaxSkinnable; ++jointId)
+            {
+                if (!TryGetJointRigidbody(jointId, out Rigidbody jointbody))
+                {
+                    continue;
+                }
+
+                if (_capsulesAreActive
+                    && Hand.GetJointPose(jointId, out Pose bonePose))
+                {
+                    Gizmos.DrawSphere(bonePose.position, 0.2f);
+                }
+            }
         }
     }
 

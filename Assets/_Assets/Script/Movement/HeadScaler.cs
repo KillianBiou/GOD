@@ -14,14 +14,14 @@ public class HeadScaler : MonoBehaviour
 
     private void Awake()
     {
-        if (XRGeneralSettings.Instance.Manager.activeLoader != null)
+        /*if (XRGeneralSettings.Instance.Manager.activeLoader != null)
         {
             XRGeneralSettings.Instance.Manager.StopSubsystems();
             XRGeneralSettings.Instance.Manager.DeinitializeLoader();
         }
 
         XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
-        XRGeneralSettings.Instance.Manager.StartSubsystems();
+        XRGeneralSettings.Instance.Manager.StartSubsystems();*/
 
     }
     private void Start()

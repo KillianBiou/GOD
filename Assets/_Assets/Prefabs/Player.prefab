@@ -10623,6 +10623,7 @@ GameObject:
   - component: {fileID: 7078221626720445556}
   - component: {fileID: 775701517598440170}
   - component: {fileID: 1515691706383764482}
+  - component: {fileID: 8690459397634764030}
   m_Layer: 0
   m_Name: '[BuildingBlock] Camera Rig'
   m_TagString: Untagged
@@ -10769,6 +10770,22 @@ MonoBehaviour:
   resetHmdPoseByMiddleMouseButton: 1
   activateKeys: 3201000031010000
   pitchKeys: 3401000033010000
+--- !u!114 &8690459397634764030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5253352440108369954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4588d6dde063a4f4d80ee7505ccd68b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeadMovementScale: {x: 1, y: 1, z: 1}
+  minHeadMovementScale: {x: 20, y: 20, z: 20}
+  maxHeight: 200
+  offset: {x: 120, y: 70, z: 120}
 --- !u!1 &5311434631425269003
 GameObject:
   m_ObjectHideFlags: 0

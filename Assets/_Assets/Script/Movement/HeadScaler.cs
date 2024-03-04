@@ -12,6 +12,18 @@ public class HeadScaler : MonoBehaviour
     public float maxHeight;
     public Vector3 offset;
 
+    private void Awake()
+    {
+        if (XRGeneralSettings.Instance.Manager.activeLoader != null)
+        {
+            XRGeneralSettings.Instance.Manager.StopSubsystems();
+            XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+        }
+
+        XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
+        XRGeneralSettings.Instance.Manager.StartSubsystems();
+
+    }
     private void Start()
     {
         transform.position = offset;

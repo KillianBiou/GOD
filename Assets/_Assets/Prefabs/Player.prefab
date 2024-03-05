@@ -123,6 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1073222405922891093}
+  - component: {fileID: 8341004564186516907}
   m_Layer: 0
   m_Name: TrackingSpace
   m_TagString: Untagged
@@ -153,6 +154,22 @@ Transform:
   - {fileID: 2568332555501107383}
   m_Father: {fileID: 7419681734505718665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8341004564186516907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42254686546496635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4588d6dde063a4f4d80ee7505ccd68b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeadMovementScale: {x: 1, y: 1, z: 1}
+  minHeadMovementScale: {x: 20, y: 20, z: 20}
+  maxHeight: 200
+  offset: {x: 0, y: 70, z: 0}
 --- !u!1 &44823636502522560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1207,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 899905342693405944}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HandManager, Assembly-CSharp
         m_MethodName: PrepareAttack
         m_Mode: 6
@@ -1205,7 +1222,7 @@ MonoBehaviour:
   _whenUnselected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 899905342693405944}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HandManager, Assembly-CSharp
         m_MethodName: PrepareAttack
         m_Mode: 6
@@ -1332,7 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 6b67162c-2460-4766-a931-980388647573
-  instanceId: ac23fea0-8db5-4302-8e8d-b1d8030a4541
+  instanceId: 52d93628-ceff-4ef3-b434-ae17c102045c
   version: 1
 --- !u!114 &8744578096093673067
 MonoBehaviour:
@@ -6145,13 +6162,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2968498604479190716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a379f34d4f4f2e408d34f14bfb753ce, type: 3}
+  m_Script: {fileID: 11500000, guid: b927808915b4eba41b76168390b99c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _updateMode: 2
   _updateAfter: {fileID: 1721474717591242423}
   _iModifyDataFromSourceMono: {fileID: 1721474717591242423}
   _applyModifier: 1
+  _scale: 15
 --- !u!114 &268146024597094023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6216,7 +6234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 8b26b298-7bf4-490e-b245-a039c0184303
-  instanceId: 9381360a-8451-491c-9b19-69dcb3ec3dab
+  instanceId: f25ddee4-bc94-4712-838f-b8244dd0af11
   version: 1
 --- !u!114 &6870419326301545637
 MonoBehaviour:
@@ -8778,7 +8796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 0393ca30-f2a9-4865-a40f-f9a68d01c3a9
-  instanceId: 9bf65692-46b3-4ca4-a997-e97c78e1727b
+  instanceId: 174884df-01b4-47c8-a9bd-67b73066e7ef
   version: 1
 --- !u!114 &2644233682946563868
 MonoBehaviour:
@@ -9520,7 +9538,7 @@ GameObject:
   - component: {fileID: 3475470495452186254}
   - component: {fileID: 2638923843191311057}
   - component: {fileID: 2034401474775511907}
-  - component: {fileID: 899905342693405944}
+  - component: {fileID: 7833788912031447105}
   m_Layer: 0
   m_Name: OVRRightHandVisual
   m_TagString: Untagged
@@ -9557,7 +9575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 316c5b1d-a5e4-49f2-a663-15fd22dbcba9
-  instanceId: 18f5bbd4-4516-41ce-a4a4-59fadf9b2cc7
+  instanceId: 37a5bb80-a23c-44e9-8eaf-b8bf394205c5
   version: 1
 --- !u!114 &2638923843191311057
 MonoBehaviour:
@@ -9568,7 +9586,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4721647616556657339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af9ea683544b184083cef283557012d, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ac73f090e6f4742839fa43c3150ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _hand: {fileID: 7750708719546977614}
@@ -9602,6 +9620,7 @@ MonoBehaviour:
   - {fileID: 1185110443137511691}
   - {fileID: 2982070469678285258}
   - {fileID: 6263813750028985934}
+  _offset: {x: 0, y: 0, z: 0}
 --- !u!114 &2034401474775511907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9620,7 +9639,8 @@ MonoBehaviour:
   _asTriggers: 0
   _useLayer: 0
   _mask: 4165628
---- !u!114 &899905342693405944
+  _offset: {x: 0, y: 0, z: 0}
+--- !u!114 &7833788912031447105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9629,10 +9649,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4721647616556657339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0062278f2fcef854cb1f6e7bdf8c92f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7571a827d3f177542bdbcf2cc004e635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slapSpeedThreshold: 2
+  staticOffset: {x: 0, y: 1, z: 0}
+  bodyTransform: {fileID: 1073222405922891093}
+  minDistance: 1
+  maxDistance: 50
+  scaleRatio: 15
 --- !u!1 &4733037999358742935
 GameObject:
   m_ObjectHideFlags: 0
@@ -10660,7 +10684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e47682b9-c270-40b1-b16d-90b627a5ce1b
-  instanceId: aedec98b-caab-4f62-9573-5d707e8f5c1a
+  instanceId: 3da0e3a1-005f-4ca0-bdd1-ea6b0e86c9b4
   version: 1
 --- !u!114 &7078221626720445556
 MonoBehaviour:
@@ -11338,7 +11362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 6b67162c-2460-4766-a931-980388647573
-  instanceId: b25c6491-20cf-4f12-a1fe-e7c314b92aa3
+  instanceId: 514bd980-5e9b-402b-a92b-3b1238efffaa
   version: 1
 --- !u!114 &7750708719546977614
 MonoBehaviour:
@@ -14084,7 +14108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 81f55626-5fad-45e9-a1df-184f330da7ba
-  instanceId: 5cc4e138-5c97-41f7-aaf2-e119c2c71a22
+  instanceId: dd501bdf-a966-4044-a2fd-55a1001c9087
   version: 1
 --- !u!114 &5358653935885764034
 MonoBehaviour:
@@ -14985,7 +15009,7 @@ GameObject:
   - component: {fileID: 5972441456724756468}
   - component: {fileID: 286596332236393011}
   - component: {fileID: 4665158895579225160}
-  - component: {fileID: 3847857048316027348}
+  - component: {fileID: 7817784746873296176}
   m_Layer: 0
   m_Name: OVRLeftHandVisual
   m_TagString: Untagged
@@ -15022,7 +15046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 316c5b1d-a5e4-49f2-a663-15fd22dbcba9
-  instanceId: 04d06f24-08af-41b3-9efc-f54ef0dc563c
+  instanceId: e2f0ad34-ca69-45ba-8cde-1cf7b29692bd
   version: 1
 --- !u!114 &286596332236393011
 MonoBehaviour:
@@ -15033,7 +15057,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7423495685905660606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af9ea683544b184083cef283557012d, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ac73f090e6f4742839fa43c3150ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _hand: {fileID: 8744578096093673067}
@@ -15067,6 +15091,7 @@ MonoBehaviour:
   - {fileID: 463345814396966209}
   - {fileID: 7742047154291742806}
   - {fileID: 2066944710973832050}
+  _offset: {x: 0, y: 0, z: 0}
 --- !u!114 &4665158895579225160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15085,7 +15110,8 @@ MonoBehaviour:
   _asTriggers: 0
   _useLayer: 0
   _mask: 4165628
---- !u!114 &3847857048316027348
+  _offset: {x: 0, y: 0, z: 0}
+--- !u!114 &7817784746873296176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15094,10 +15120,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7423495685905660606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0062278f2fcef854cb1f6e7bdf8c92f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7571a827d3f177542bdbcf2cc004e635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slapSpeedThreshold: 1.3
+  staticOffset: {x: 0, y: 1, z: 0}
+  bodyTransform: {fileID: 1073222405922891093}
+  minDistance: 1
+  maxDistance: 50
+  scaleRatio: 15
 --- !u!1 &7431706874374120029
 GameObject:
   m_ObjectHideFlags: 0
@@ -16079,7 +16109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 8b26b298-7bf4-490e-b245-a039c0184303
-  instanceId: 91783bca-c3d6-4694-aa2d-d06245f8d690
+  instanceId: dcb6eb8e-66bd-45af-80f6-ec7dae6cbb42
   version: 1
 --- !u!114 &1174417334270517145
 MonoBehaviour:
@@ -17929,7 +17959,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3847857048316027348}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HandManager, Assembly-CSharp
         m_MethodName: PrepareAttack
         m_Mode: 6
@@ -17944,7 +17974,7 @@ MonoBehaviour:
   _whenUnselected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3847857048316027348}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HandManager, Assembly-CSharp
         m_MethodName: PrepareAttack
         m_Mode: 6
@@ -18809,13 +18839,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 9063591190692898871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a379f34d4f4f2e408d34f14bfb753ce, type: 3}
+  m_Script: {fileID: 11500000, guid: b927808915b4eba41b76168390b99c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _updateMode: 2
   _updateAfter: {fileID: 2626958444318515874}
   _iModifyDataFromSourceMono: {fileID: 2626958444318515874}
   _applyModifier: 1
+  _scale: 15
 --- !u!114 &6822591717267968181
 MonoBehaviour:
   m_ObjectHideFlags: 0

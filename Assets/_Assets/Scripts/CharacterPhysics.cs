@@ -7,7 +7,7 @@ public class CharacterPhysics : MonoBehaviour
     private Rigidbody rb;
     private bool thrown = false;
 
-    private float throwSpeedThreshold = 5f;
+    private float throwSpeedThreshold = 20f;
 
     Vector3 previousPosition = Vector3.zero;
 
@@ -47,6 +47,7 @@ public class CharacterPhysics : MonoBehaviour
         rb.isKinematic = false;
         Invoke("ResetCollision", 0.2f);
         rb.velocity = 100f * movementDirection;
+        Invoke("Death", 3f);
     }
 
     void ResetCollision()
@@ -54,5 +55,10 @@ public class CharacterPhysics : MonoBehaviour
         grabbable.gameObject.SetActive(true);
         characterCollider.enabled = true;
         thrown = false;
+    }
+
+    private void Death()
+    {
+        Destroy(gameObject);
     }
 }

@@ -6169,7 +6169,7 @@ MonoBehaviour:
   _updateAfter: {fileID: 1721474717591242423}
   _iModifyDataFromSourceMono: {fileID: 1721474717591242423}
   _applyModifier: 1
-  _scale: 15
+  _scale: 25
 --- !u!114 &268146024597094023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9652,7 +9652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7571a827d3f177542bdbcf2cc004e635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staticOffset: {x: 0, y: 1, z: 0}
+  staticOffset: {x: 0, y: 1, z: -0.1}
   bodyTransform: {fileID: 1073222405922891093}
   minDistance: 1
   maxDistance: 50
@@ -15123,7 +15123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7571a827d3f177542bdbcf2cc004e635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staticOffset: {x: 0, y: 1, z: 0}
+  staticOffset: {x: 0, y: 1, z: -0.1}
   bodyTransform: {fileID: 1073222405922891093}
   minDistance: 1
   maxDistance: 50
@@ -18846,7 +18846,7 @@ MonoBehaviour:
   _updateAfter: {fileID: 2626958444318515874}
   _iModifyDataFromSourceMono: {fileID: 2626958444318515874}
   _applyModifier: 1
-  _scale: 15
+  _scale: 25
 --- !u!114 &6822591717267968181
 MonoBehaviour:
   m_ObjectHideFlags: 0

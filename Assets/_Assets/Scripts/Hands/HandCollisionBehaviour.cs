@@ -4,12 +4,32 @@ public class HandCollisionBehaviour : MonoBehaviour
 {
     private Rigidbody rb;
 
-    private float pushSpeedThreshold = 3f;
+    private float pushSpeedThreshold = 1300f;
+
+    //private Transform grabbedTransform = null;
+    //private float debugMaxSpeed = 0f;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
+
+    /*private void FixedUpdate()
+    {
+        float speed = rb.velocity.magnitude;
+        if (speed > debugMaxSpeed)
+        {
+            debugMaxSpeed = speed;
+        }
+
+        if (!grabbedTransform)
+        {
+            return;
+        }
+
+        grabbedTransform.position = transform.position;
+    }*/
+
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("HAND COLLISION");
@@ -25,6 +45,10 @@ public class HandCollisionBehaviour : MonoBehaviour
 
         if (rb.velocity.magnitude < pushSpeedThreshold)
         {
+            /*Debug.Log("GRAB FROM COLLISION");
+            grabbedTransform = collision.transform;
+            collision.rigidbody.isKinematic = true;*/
+            
             return;
         }
 

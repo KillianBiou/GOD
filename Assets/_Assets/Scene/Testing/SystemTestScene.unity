@@ -264,30 +264,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7817784746873296176, guid: 48b658544c27a4245babd56d34383211,
+    - target: {fileID: 3379517574669830722, guid: 48b658544c27a4245babd56d34383211,
         type: 3}
-      propertyPath: staticOffset.y
-      value: 1.5
+      propertyPath: _scale
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 7817784746873296176, guid: 48b658544c27a4245babd56d34383211,
+    - target: {fileID: 7848326425267968887, guid: 48b658544c27a4245babd56d34383211,
         type: 3}
-      propertyPath: staticOffset.z
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833788912031447105, guid: 48b658544c27a4245babd56d34383211,
-        type: 3}
-      propertyPath: staticOffset.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833788912031447105, guid: 48b658544c27a4245babd56d34383211,
-        type: 3}
-      propertyPath: staticOffset.z
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8341004564186516907, guid: 48b658544c27a4245babd56d34383211,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: _scale
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8668540529351137606, guid: 48b658544c27a4245babd56d34383211,
         type: 3}
@@ -1807,17 +1792,17 @@ PrefabInstance:
     - target: {fileID: 1139654027278235831, guid: a89a170b9cfb00f4190419754eb584c4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.15
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1139654027278235831, guid: a89a170b9cfb00f4190419754eb584c4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.619
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1139654027278235831, guid: a89a170b9cfb00f4190419754eb584c4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.065
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 1139654027278235831, guid: a89a170b9cfb00f4190419754eb584c4,
         type: 3}
@@ -1858,6 +1843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BaseEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134524649433672447, guid: a89a170b9cfb00f4190419754eb584c4,
+        type: 3}
+      propertyPath: m_Mass
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1984,7 +1974,7 @@ MonoBehaviour:
   attackRating: 1
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   speedThresholdToExplode: 3
 --- !u!65 &1984174363
 BoxCollider:

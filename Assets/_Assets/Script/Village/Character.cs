@@ -7,7 +7,7 @@ public class Character : MonoBehaviour
     [SerializeField]
     private Renderer characterRenderer;
 
-    void Start()
+    protected void Start()
     {
         if (characterRenderer)
         {
@@ -18,8 +18,6 @@ public class Character : MonoBehaviour
             characterRenderer.material.SetColor("_ColorPant", randomColors.Item3);
             characterRenderer.material.SetColor("_ColorShose", randomColors.Item4);
             characterRenderer.material.SetColor("_ColorHair", randomColors.Item5);
-
-            Debug.Log("Random Done");
         }
     }
 }

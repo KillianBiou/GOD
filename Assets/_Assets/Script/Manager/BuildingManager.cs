@@ -33,4 +33,11 @@ public class BuildingManager : MonoBehaviour
 
         return (buildings[index0].exit.position, buildings[index1].exit.position);
     }
+
+    public Building GetPotentialTarget()
+    {
+        Debug.Log(Random.Range(0, buildings.Count));
+        Debug.Log(buildings.Count);
+        return buildings[Random.Range(0, buildings.Count)];
+    }
 }

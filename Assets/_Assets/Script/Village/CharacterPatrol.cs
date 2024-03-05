@@ -8,10 +8,18 @@ public enum CharacterState
     WALKING,
     GRABBED,
     KO,
+    RUNATTACK,
+    ATTACK,
+    TALK,
+    FARM,
+    CHOP,
+    REST,
     UNKNOWN
 }
 
 [RequireComponent(typeof(PeonRagdoll))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class CharacterPatrol : Character
 {
     private NavMeshAgent agent;

@@ -9,14 +9,15 @@ TerrainLayer:
   m_Name: CivilisationLayer
   m_DiffuseTexture: {fileID: 2800000, guid: 9a59da03716af1a40bf487f8800579a4, type: 3}
   m_NormalMapTexture: {fileID: 0}
-  m_MaskMapTexture: {fileID: 0}
+  m_MaskMapTexture: {fileID: 727698857160474341, guid: c4a0e5ac5bd69864e9ce7a27293e5d03,
+    type: 2}
   m_TileSize: {x: 37.5, y: 37.5}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
-  m_Smoothness: 0
+  m_Smoothness: 1
   m_NormalScale: 1
   m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
   m_DiffuseRemapMax: {x: 0.9056604, y: 0.70329976, z: 0.3033108, w: 1}
   m_MaskMapRemapMin: {x: 0, y: 0, z: 0, w: 0}
-  m_MaskMapRemapMax: {x: 1, y: 1, z: 1, w: 1}
+  m_MaskMapRemapMax: {x: 1, y: 0, z: 1, w: 1}

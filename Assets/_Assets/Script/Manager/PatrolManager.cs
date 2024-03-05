@@ -4,6 +4,7 @@ using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class PatrolManager : MonoBehaviour
 {
     public List<GameObject> possibleCharacters;
@@ -41,7 +42,6 @@ public class PatrolManager : MonoBehaviour
             if (NavMesh.SamplePosition(patrolPos.Item1, out hit, Mathf.Infinity, NavMesh.AllAreas))
             {
                 startingPos = hit.position;
-                Debug.Log("Point found");
             }
             GameObject a = Instantiate(possibleCharacters[Random.Range(0, possibleCharacters.Count)], startingPos, Quaternion.identity, characterHolder.transform);
             a.GetComponent<CharacterPatrol>().Setup(Random.Range(speedRange[0], speedRange[1]), patrolPos.Item2);

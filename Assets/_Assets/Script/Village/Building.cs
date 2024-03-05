@@ -8,11 +8,6 @@ public class Building : MonoBehaviour
 
     private void Awake()
     {
-        exit = transform.Find("Exit");
-    }
-
-    private void Start()
-    {
-        BuildingManager.Instance.RegisterBuilding(this);
+        exit = transform.Find("Exit"); BuildingManager.Instance.RegisterBuilding(this);
     }
 }

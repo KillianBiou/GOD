@@ -7,6 +7,13 @@ public class Character : MonoBehaviour
     [SerializeField]
     private Renderer characterRenderer;
 
+    protected Transform root;
+
+    protected void Awake()
+    {
+        root = transform.FindChildRecursive("Forward");
+    }
+
     protected void Start()
     {
         if (characterRenderer)

@@ -14,6 +14,8 @@ public enum CharacterState
     FARM,
     CHOP,
     REST,
+    GETUP_FACE,
+    GETUP_BACK,
     UNKNOWN
 }
 
@@ -28,9 +30,12 @@ public class CharacterPatrol : Character
     private PeonRagdoll peonRagdoll;
 
     private Animator animator;
+    private bool animationLock = false;
 
     private void Awake()
     {
+        base.Awake();
+
         peonRagdoll = GetComponent<PeonRagdoll>();
         animator = GetComponent<Animator>();
 
@@ -86,18 +91,32 @@ public class CharacterPatrol : Character
                 animator.ResetTrigger("Grab");
                 animator.SetTrigger("Walk");
                 agent.isStopped = false;
+                agent.updatePosition = true;
                 break;
             case CharacterState.GRABBED:
                 peonRagdoll.ChangeState(RagdollPreset.FREE_ARM_HEAD);
                 animator.ResetTrigger("Walk");
                 animator.SetTrigger("Grab");
                 agent.isStopped = true;
+                agent.updatePosition = false;
                 break;
             case CharacterState.KO:
                 peonRagdoll.ChangeState(RagdollPreset.FREE_ALL);
                 animator.enabled = false;
                 agent.isStopped = true;
-                Destroy(gameObject, 5f);
+                StartCoroutine(ScheduleGetUp());
+                break;
+            case CharacterState.GETUP_FACE:
+                animator.enabled = true;
+                peonRagdoll.ChangeState(RagdollPreset.LOCKED_ALL);
+                animator.Play("StandUpFace");
+                agent.isStopped = true;
+                break;
+            case CharacterState.GETUP_BACK:
+                animator.enabled = true;
+                peonRagdoll.ChangeState(RagdollPreset.LOCKED_ALL);
+                animator.Play("StandUpBack");
+                agent.isStopped = true;
                 break;
             default:
                 peonRagdoll.ChangeState(RagdollPreset.LOCKED_ALL);
@@ -105,6 +124,34 @@ public class CharacterPatrol : Character
                 break;
         }
         characterState = state;
+    }
+
+    private IEnumerator ScheduleGetUp()
+    {
+        NavMeshHit hit;
+        if (!NavMesh.SamplePosition(root.position, out hit, Mathf.Infinity, NavMesh.AllAreas))
+        {
+            Destroy(gameObject);
+        }
+
+        yield return new WaitForSeconds(3f);
+
+        agent.updatePosition = true;
+
+        if (Vector3.Dot(root.forward, Vector3.down) < 0f)
+        {
+            ChangeState(CharacterState.GETUP_BACK);
+            yield return new WaitForSeconds(3f);
+        }
+        else
+        {
+            ChangeState(CharacterState.GETUP_FACE);
+            yield return new WaitForSeconds(2f);
+        }
+
+        agent.isStopped = false;
+
+        ChangeState(CharacterState.WALKING);
     }
 
     private void OnDestroy()

@@ -22,6 +22,7 @@ public class KnightBehaviour : MonoBehaviour
 
     private void Awake()
     {
+
         agent = GetComponent<NavMeshAgent>();
 
         animK = knight.GetComponent<Animator>();
@@ -119,7 +120,7 @@ public class KnightBehaviour : MonoBehaviour
 
     private void ResetAllTriggers(Animator animator)
     {
-        foreach (var param in animH.parameters)
+        foreach (var param in animator.parameters)
         {
             if (param.type == AnimatorControllerParameterType.Trigger)
             {

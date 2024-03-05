@@ -33,6 +33,7 @@ public class HandScaler : MonoBehaviour
     {
         if (!handVisual.Hand.IsTrackedDataValid)
         {
+            offset = Vector3.zero;
             return;
         }
         /*float distance = wrist.localPosition.magnitude;

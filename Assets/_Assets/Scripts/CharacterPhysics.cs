@@ -7,7 +7,7 @@ public class CharacterPhysics : MonoBehaviour
     private Rigidbody rb;
     private bool thrown = false;
 
-    private float throwSpeedThreshold = .2f;
+    private float throwSpeedThreshold = 5f;
 
     Vector3 previousPosition = Vector3.zero;
 

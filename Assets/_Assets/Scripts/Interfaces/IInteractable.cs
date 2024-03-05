@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void Grab();
+    void Grab(Transform target);
     void Slap();
 }

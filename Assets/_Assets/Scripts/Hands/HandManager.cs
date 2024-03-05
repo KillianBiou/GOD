@@ -1,13 +1,10 @@
-using Unity.VisualScripting;
+using Oculus.Interaction.Input;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(HandPhysicsCapsules))]
 public class HandManager : MonoBehaviour
 {
-    [SerializeField] private float slapSpeedThreshold = 1.0f;
-
-    private Rigidbody rb;
+    [SerializeField] private float slapSpeedThreshold = 2.0f;
     public enum HandState
     {
         Normal,
@@ -16,32 +13,14 @@ public class HandManager : MonoBehaviour
     }
     private HandState state;
     // Start is called before the first frame update
+
+    private HandPhysicsCapsules physics;
+
+    private bool isPreparingAttack = false;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.isKinematic = true;
-        rb.useGravity = false;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        IInteractable interactable;
-        if (!collision.collider.TryGetComponent<IInteractable>(out interactable))
-        {
-            return;
-        }
-
-        switch (state)
-        {
-            case HandState.Normal:
-                break;
-            case HandState.Slap:
-                interactable.Slap();
-                break;
-            case HandState.Grab:
-                interactable.Grab();
-                break;
-        }
+        physics = GetComponent<HandPhysicsCapsules>();
     }
 
     // Update is called once per frame
@@ -52,12 +31,12 @@ public class HandManager : MonoBehaviour
 
     void CheckHandState()
     {
-        Debug.Log(rb.velocity.sqrMagnitude);
-        if (rb.velocity.sqrMagnitude > slapSpeedThreshold) // && (handPose == openHand || handPose == closedHand || handPose == pointing)
+        if (state == HandState.Grab)
         {
-            state = HandState.Slap;
+            return;
         }
-        else if (true) // handPose == grab
+        Vector3 velocity = physics.GetHandVelocity();
+        if (isPreparingAttack && velocity.sqrMagnitude > slapSpeedThreshold) // && (handPose == openHand || handPose == closedHand || handPose == pointing)
         {
             state = HandState.Slap;
         }
@@ -67,8 +46,31 @@ public class HandManager : MonoBehaviour
         }
     }
 
+
     public HandState GetCurrentHandState()
     {
         return state;
+    }
+    public void SetNormalState()
+    {
+        SetHandState(HandState.Normal);
+    }
+    public void SetGrabState()
+    {
+        SetHandState(HandState.Grab);
+    }
+    public void SetSlapState()
+    {
+        SetHandState(HandState.Slap);
+    }
+
+    public void SetHandState(HandState state)
+    {
+        this.state = state;
+    }
+
+    public void PrepareAttack(bool value)
+    {
+        isPreparingAttack = value;
     }
 }

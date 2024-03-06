@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -43,6 +44,10 @@ public class VikingBehaviour : Character
 
     private void Update()
     {
+        if (scheduleKO)
+        {
+            ChangeState(CharacterState.KO);
+        }
         if(DistanceToTarget() <= 3f && characterState != CharacterState.ATTACK)
         {
             agent.isStopped = true;
@@ -99,6 +104,7 @@ public class VikingBehaviour : Character
                 peonRagdoll.ChangeState(RagdollPreset.FREE_ALL);
                 animator.enabled = false;
                 agent.isStopped = true;
+                scheduleKO = false;
                 Destroy(gameObject, 5f);
                 break;
             case CharacterState.RUNATTACK:

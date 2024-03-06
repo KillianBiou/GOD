@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using static UnityEngine.GraphicsBuffer;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class KnightBehaviour : MonoBehaviour
+public class KnightBehaviour : MonoBehaviour, IInteractable
 {
     [SerializeField]
     private GameObject knight;
@@ -127,5 +127,16 @@ public class KnightBehaviour : MonoBehaviour
                 animator.ResetTrigger(param.name);
             }
         }
+    }
+
+    public void Grab(Transform target)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void Slap()
+    {
+        Destroy(gameObject);
+        throw new System.NotImplementedException();
     }
 }

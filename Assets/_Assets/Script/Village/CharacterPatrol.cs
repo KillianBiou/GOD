@@ -53,7 +53,11 @@ public class CharacterPatrol : Character
 
     private void Update()
     {
-        if(DistanceToTarget() <= 1.5f)
+        if (scheduleKO)
+        {
+            ChangeState(CharacterState.KO);
+        }
+        if (DistanceToTarget() <= 1.5f)
         {
             Destroy(gameObject);
         }
@@ -101,6 +105,7 @@ public class CharacterPatrol : Character
                 agent.updatePosition = false;
                 break;
             case CharacterState.KO:
+                scheduleKO = false;
                 peonRagdoll.ChangeState(RagdollPreset.FREE_ALL);
                 animator.enabled = false;
                 agent.isStopped = true;

@@ -225,7 +225,10 @@ namespace Oculus.Interaction.Input
         private CapsuleCollider CreateCollider(string name,
             Transform holder, Vector3 from, Vector3 to, float radius, float offset)
         {
-            CapsuleCollider collider = new GameObject(name)
+            GameObject gameObject = new GameObject(name);
+            gameObject.layer = LayerMask.NameToLayer("Hand");
+            Debug.Log(gameObject.layer);
+            CapsuleCollider collider = gameObject
                 .AddComponent<CapsuleCollider>();
             collider.isTrigger = _asTriggers;
 

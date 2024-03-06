@@ -38,10 +38,6 @@ public class PeonRagdoll : MonoBehaviour
 {
     public List<BonesMatching> bonesMapping;
 
-    private void Awake()
-    {
-    }
-
     public void MatchBones()
     {
         bonesMapping = new List<BonesMatching>();
@@ -80,7 +76,7 @@ public class PeonRagdoll : MonoBehaviour
 
     private void ToFreeArm()
     {
-        List<BoneType> freeList = new List<BoneType>(){ BoneType.R_LowerArm, BoneType.L_LowerArm };
+        List<BoneType> freeList = new List<BoneType>(){ BoneType.R_LowerArm, BoneType.L_LowerArm, BoneType.Head };
 
         foreach(BonesMatching b in bonesMapping) {
             if (freeList.Contains(b.type))
@@ -132,7 +128,8 @@ public class PeonRagdoll : MonoBehaviour
     {
         foreach (BonesMatching b in bonesMapping)
         {
-            b.bone.GetComponent<Rigidbody>().isKinematic = true;
+            if (b.type != BoneType.Head)
+                b.bone.GetComponent<Rigidbody>().isKinematic = true;
         }
     }
 }

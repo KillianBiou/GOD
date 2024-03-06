@@ -4,7 +4,7 @@ public class HandCollisionBehaviour : MonoBehaviour
 {
     private Rigidbody rb;
 
-    private float pushSpeedThreshold = 1300f;
+    private float pushSpeedThreshold = 10f;
 
     //private Transform grabbedTransform = null;
     //private float debugMaxSpeed = 0f;
@@ -32,9 +32,9 @@ public class HandCollisionBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("HAND COLLISION");
+        Debug.Log(collision.transform);
         IInteractable interactable = null;
-        if (!collision.collider.TryGetComponent<IInteractable>(out interactable))
+        if (!collision.transform.TryGetComponent<IInteractable>(out interactable))
         {
             return;
         }

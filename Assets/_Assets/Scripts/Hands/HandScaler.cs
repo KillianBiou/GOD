@@ -31,9 +31,11 @@ public class HandScaler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!handVisual.Hand.IsTrackedDataValid)
+        if (!handVisual.Hand.IsTrackedDataValid || offset.sqrMagnitude > 10e6)
         {
             offset = Vector3.zero;
+            handVisual.Offset = offset;
+            handPhysics.Offset = offset;
             return;
         }
         /*float distance = wrist.localPosition.magnitude;

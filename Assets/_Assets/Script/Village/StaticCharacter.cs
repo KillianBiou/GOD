@@ -43,6 +43,11 @@ public class StaticCharacter : Character
 
     private void Update()
     {
+        if (scheduleKO)
+        {
+            ChangeState(CharacterState.KO);
+        }
+
         if(animationLock)
         {
             return;
@@ -120,6 +125,7 @@ public class StaticCharacter : Character
                 agent.enabled = false;
                 break;
             case CharacterState.KO:
+                scheduleKO = false;
                 peonRagdoll.ChangeState(RagdollPreset.FREE_ALL);
                 animator.enabled = false;
                 agent.isStopped = true;

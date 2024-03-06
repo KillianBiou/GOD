@@ -14,6 +14,7 @@ public enum CharacterState
     FARM,
     CHOP,
     REST,
+    DISCUSSION,
     GETUP_FACE,
     GETUP_BACK,
     UNKNOWN

@@ -66,6 +66,9 @@ public class KnightBehaviour : MonoBehaviour
     
     private void Update()
     {
+        if (target.GetBuildingState() == BuildingState.DESTROYED)
+            target = BuildingManager.Instance.GetPotentialTarget();
+
         if (DistanceToTarget() <= 3f && characterState != CharacterState.ATTACK)
         {
             agent.isStopped = true;
@@ -114,8 +117,15 @@ public class KnightBehaviour : MonoBehaviour
         animH.Play("Idle");
         animK.Play("Idle");
 
+        Destroy(GetComponentInChildren<AttackSocket>());
+
         hBehaviour.Setup(target);
         kBehaviour.Setup(target);
+    }
+
+    public Building GetTarget()
+    {
+        return target;
     }
 
     private void ResetAllTriggers(Animator animator)

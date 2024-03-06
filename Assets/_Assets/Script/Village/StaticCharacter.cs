@@ -135,6 +135,14 @@ public class StaticCharacter : Character
                 animator.SetTrigger("Farm");
                 agent.isStopped = true;
                 break;
+            case CharacterState.DISCUSSION:
+                peonRagdoll.ChangeState(RagdollPreset.LOCKED_ALL);
+                float totalFrames = animator.GetCurrentAnimatorClipInfo(0)[0].clip.frameRate;
+                float randomFrame = Random.Range(0, totalFrames);
+                float normalizedTime = (float)randomFrame / totalFrames;
+                animator.Play("PeonDiscussion", 0, normalizedTime);
+                agent.isStopped = true;
+                break;
             case CharacterState.GETUP_FACE:
                 animator.enabled = true;
                 peonRagdoll.ChangeState(RagdollPreset.LOCKED_ALL);

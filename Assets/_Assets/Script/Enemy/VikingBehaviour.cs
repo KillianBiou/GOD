@@ -43,7 +43,10 @@ public class VikingBehaviour : Character
 
     private void Update()
     {
-        if(DistanceToTarget() <= 3f && characterState != CharacterState.ATTACK)
+        if (target.GetBuildingState() == BuildingState.DESTROYED)
+            target = BuildingManager.Instance.GetPotentialTarget();
+
+        if (DistanceToTarget() <= 3f && characterState != CharacterState.ATTACK)
         {
             agent.isStopped = true;
             ChangeState(CharacterState.ATTACK);
@@ -123,6 +126,15 @@ public class VikingBehaviour : Character
         agent.speed = 10f;
         agent.SetDestination(target.exit.transform.position);
         ChangeState(CharacterState.RUNATTACK);
+    }
+
+    public void TriggerAttack()
+    {
+        Debug.Log("ATTACKED BUILDING");
+        if (target.GetBuildingState() != BuildingState.DESTROYED)
+            target.TakeDamage(1);
+        else
+            target = BuildingManager.Instance.GetPotentialTarget();
     }
 
     private void OnDestroy()
